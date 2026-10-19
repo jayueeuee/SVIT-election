@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Signup</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <nav class="nav">
+    <a class="brand" href="/">
+      <span class="crest">CE</span>
+      College Election Portal
+    </a>
+
+    <div class="nav-links">
+      <a href="/student-login.html">Student Login</a>
+      <a href="/professor-login.html">Professor</a>
+    </div>
+  </nav>
+
+  <main class="page" style="max-width: 560px;">
+
+    <section class="card">
+
+      <p class="kicker">Student access</p>
+
+      <h1>Create Student Account</h1>
+
+      <p class="muted">
+        Create your account to participate in college elections.
+      </p>
+
+      <div id="alert" class="alert error hidden"></div>
+
+      <form id="student-signup-form" class="form-grid">
+
+        <label>
+          Full Name
+          <input
+            type="text"
+            name="name"
+            required
+            autocomplete="name"
+            placeholder="Enter your full name"
+          >
+        </label>
+
+        <label>
+          Email
+          <input
+            type="email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="student@college.edu"
+          >
+        </label>
+
+        <label>
+          Roll Number
+          <input
+            type="text"
+            name="roll_no"
+            required
+            placeholder="Enter your roll number"
+          >
+        </label>
+
+        <label>
+          Branch
+          <input
+            type="text"
+            name="branch"
+            required
+            placeholder="e.g. Information Technology"
+          >
+        </label>
+
+        <label>
+          Year
+          <select name="student_year" required>
+            <option value="">Select your year</option>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+          </select>
+        </label>
+
+        <label>
+          Password
+          <input
+            type="password"
+            name="password"
+            required
+            minlength="8"
+            autocomplete="new-password"
+            placeholder="Minimum 8 characters"
+          >
+        </label>
+
+        <label>
+          Confirm Password
+          <input
+            type="password"
+            name="confirm_password"
+            required
+            minlength="8"
+            autocomplete="new-password"
+            placeholder="Re-enter your password"
+          >
+        </label>
+
+        <button class="btn" type="submit">
+          Create Account
+        </button>
+
+      </form>
+
+      <p class="muted">
+        Already have an account?
+        <a href="/student-login.html">Sign in</a>
+      </p>
+
+    </section>
+
+  </main>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/student-signup.js"></script>
+
+</body>
+</html>

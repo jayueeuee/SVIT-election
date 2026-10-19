@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Election</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <nav class="nav">
+    <a class="brand" href="/">
+      <span class="crest">CE</span>
+      Student Voting
+    </a>
+  </nav>
+
+  <main class="page" style="max-width: 680px;">
+    <section class="card">
+
+      <p class="kicker">Student verification</p>
+
+      <div id="election-meta">
+        Loading election...
+      </div>
+
+      <div id="alert" class="alert error hidden"></div>
+
+      <form id="student-form" class="form-grid hidden">
+
+        <label>
+          Full name
+          <input
+            name="student_name"
+            required
+            placeholder="Enter your full name"
+          >
+        </label>
+
+        <label>
+          Roll number
+          <input
+            name="roll_no"
+            required
+            placeholder="Enter your roll number"
+          >
+        </label>
+
+        <label>
+          Branch
+          <input
+            name="branch"
+            required
+            placeholder="Computer Science"
+          >
+        </label>
+
+        <label>
+          Year
+          <select name="year" required>
+            <option value="">Select your year</option>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+          </select>
+        </label>
+
+        <label>
+          Email
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="example@gmail.com"
+          >
+        </label>
+
+        <label>
+          Election key
+          <input
+            name="election_key"
+            required
+            inputmode="numeric"
+            autocomplete="off"
+            placeholder="Enter election key"
+          >
+        </label>
+
+        <button class="btn" type="submit">
+          Verify and continue
+        </button>
+
+      </form>
+
+    </section>
+  </main>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/election.js"></script>
+
+</body>
+</html>

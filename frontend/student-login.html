@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <nav class="nav">
+    <a class="brand" href="/">
+      <span class="crest">CE</span>
+      College Election Portal
+    </a>
+
+    <div class="nav-links">
+      <a href="/professor-login.html">Professor</a>
+    </div>
+  </nav>
+
+  <main class="page" style="max-width: 560px;">
+
+    <section class="card">
+
+      <p class="kicker">Student access</p>
+
+      <h1>Student Login</h1>
+
+      <p class="muted">
+        Sign in using your student account to participate in college elections.
+      </p>
+
+      <div id="alert" class="alert error hidden"></div>
+
+      <form id="student-login-form" class="form-grid">
+
+        <label>
+          Email
+          <input
+            type="email"
+            name="email"
+            required
+            autocomplete="username"
+            placeholder="student@college.edu"
+          >
+        </label>
+
+        <label>
+          Password
+          <input
+            type="password"
+            name="password"
+            required
+            autocomplete="current-password"
+            placeholder="Enter your password"
+          >
+        </label>
+
+        <button class="btn" type="submit">
+          Sign In
+        </button>
+
+      </form>
+
+      <p class="muted">
+        Don't have an account?
+        <a href="/student-signup.html">Create Account</a>
+      </p>
+
+      <div class="card" style="margin-top: 24px;">
+
+        <p class="kicker">Election access</p>
+
+        <h2>Have an election code?</h2>
+
+        <p class="muted">
+          Enter the election code provided by your professor.
+        </p>
+
+        <form id="code-form" class="form-grid">
+
+          <label>
+            Election Code
+            <input
+              name="code"
+              required
+              placeholder="ABC123"
+              maxlength="32"
+            >
+          </label>
+
+          <button class="btn" type="submit">
+            Open Election
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/student-login.js"></script>
+
+  <script>
+    document
+      .getElementById('code-form')
+      .addEventListener('submit', (event) => {
+
+        event.preventDefault();
+
+        const code =
+          new FormData(event.target)
+            .get('code')
+            .trim()
+            .toUpperCase();
+
+        if (code) {
+          window.location.href =
+            '/election/' +
+            encodeURIComponent(code);
+        }
+
+      });
+  </script>
+
+</body>
+</html>

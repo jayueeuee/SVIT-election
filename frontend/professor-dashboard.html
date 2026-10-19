@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professor Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/professor-dashboard.html">
+      <span class="crest">CE</span>
+      Election Dashboard
+    </a>
+
+    <div class="nav-links">
+      <a href="/create-election.html">Create election</a>
+      <button class="linkish" id="logout-btn" type="button">Log out</button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="row-between">
+      <div>
+        <p class="kicker">Live administration</p>
+        <h1>Professor dashboard</h1>
+        <p class="muted" id="welcome">Loading...</p>
+      </div>
+
+      <a class="btn" href="/create-election.html">Create election</a>
+    </div>
+
+    <div id="alert" class="alert error hidden"></div>
+
+
+    <!-- ================================
+         STUDENT REQUESTS
+         ================================ -->
+
+    <section class="card" style="margin-bottom: 24px;">
+      <div class="row-between">
+        <div>
+          <p class="kicker">Student verification</p>
+          <h2>Student Requests</h2>
+          <p class="muted">
+            Approve students before they can vote.
+          </p>
+        </div>
+
+        <button
+          class="btn"
+          id="refresh-student-requests"
+          type="button"
+        >
+          Refresh
+        </button>
+      </div>
+
+      <div id="student-requests">
+        <p class="muted">Loading student requests...</p>
+      </div>
+    </section>
+
+
+    <!-- Existing elections -->
+    <div id="elections"></div>
+  </main>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/professor.js"></script>
+</body>
+</html>

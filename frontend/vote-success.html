@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote Submitted</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/">
+      <span class="crest">CE</span>
+      College Election Portal
+    </a>
+  </nav>
+  <main class="page" style="max-width: 560px;">
+    <section class="card">
+      <p class="kicker">Complete</p>
+      <h1>Your vote has been submitted</h1>
+      <p class="lead" id="success-text">Thank you for participating in this campus election.</p>
+      <p class="muted">Your choice is recorded securely. You cannot vote again in this election.</p>
+      <a class="btn secondary" href="/">Return home</a>
+    </section>
+  </main>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const election = params.get('election');
+    const candidate = params.get('candidate');
+    const el = document.getElementById('success-text');
+    if (election && candidate) {
+      el.textContent = 'You voted for ' + candidate + ' in ' + election + '.';
+    }
+  </script>
+</body>
+</html>

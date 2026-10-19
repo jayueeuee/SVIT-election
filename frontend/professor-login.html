@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professor Login</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/">
+      <span class="crest">CE</span>
+      College Election Portal
+    </a>
+    <div class="nav-links">
+      <a href="/student-login.html">Student</a>
+    </div>
+  </nav>
+  <main class="page" style="max-width: 520px;">
+    <section class="card">
+      <p class="kicker">Faculty access</p>
+      <h1>Professor login</h1>
+      <p class="muted">Use your college election administrator account.</p>
+      <div id="alert" class="alert error hidden"></div>
+      <form id="login-form" class="form-grid">
+        <label>Email
+          <input type="email" name="email" required autocomplete="username">
+        </label>
+        <label>Password
+          <input type="password" name="password" required autocomplete="current-password">
+        </label>
+        <button class="btn" type="submit">Sign in</button>
+      </form>
+<p class="muted">
+  Don't have an account?
+  <a href="/professor-signup.html">Create Account</a>
+</p>    </section>
+  </main>
+  <script src="/js/main.js"></script>
+  <script src="/js/professor.js"></script>
+</body>
+</html>

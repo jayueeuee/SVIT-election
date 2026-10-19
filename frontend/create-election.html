@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Election</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="brand" href="/professor-dashboard.html">
+      <span class="crest">CE</span>
+      Create Election
+    </a>
+
+    <div class="nav-links">
+      <a href="/professor-dashboard.html">Dashboard</a>
+    </div>
+  </nav>
+
+
+  <main class="page">
+
+    <section class="card">
+
+      <p class="kicker">New campus election</p>
+
+      <h1>Create an election</h1>
+
+      <p class="muted">
+        A unique election ID, shareable link, and numeric key are generated automatically.
+      </p>
+
+
+      <div id="alert" class="alert error hidden"></div>
+
+
+      <form id="create-form" class="form-grid">
+
+
+        <!-- Election Name -->
+
+        <label>
+          Election name
+          <input
+            name="election_name"
+            required
+            placeholder="Student Council Election 2026"
+          >
+        </label>
+
+
+        <!-- Description -->
+
+        <label>
+          Description
+          <textarea
+            name="description"
+            placeholder="Describe the election"
+          ></textarea>
+        </label>
+
+
+        <!-- Start / End Time -->
+
+        <div class="grid-2">
+
+          <label>
+            Start time
+            <input
+              type="datetime-local"
+              name="start_time"
+              required
+            >
+          </label>
+
+          <label>
+            End time
+            <input
+              type="datetime-local"
+              name="end_time"
+              required
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Expected Voters -->
+
+        <label>
+          Expected voters (optional, used for voting percentage)
+          <input
+            type="number"
+            min="0"
+            name="expected_voters"
+            placeholder="e.g. 240"
+          >
+        </label>
+
+
+        <!-- YEAR-WISE STUDENT LIMIT -->
+
+        <div class="card" style="margin: 0;">
+
+          <h2>Year-wise voting limit</h2>
+
+          <p class="muted">
+            Enter the total number of students allowed to vote from each year.
+            Enter 0 if that year is not allowed to vote.
+          </p>
+
+
+          <div class="grid-2">
+
+            <label>
+              1st Year students
+              <input
+                type="number"
+                name="first_year_limit"
+                min="0"
+                value="0"
+                required
+              >
+            </label>
+
+
+            <label>
+              2nd Year students
+              <input
+                type="number"
+                name="second_year_limit"
+                min="0"
+                value="0"
+                required
+              >
+            </label>
+
+
+            <label>
+              3rd Year students
+              <input
+                type="number"
+                name="third_year_limit"
+                min="0"
+                value="0"
+                required
+              >
+            </label>
+
+
+            <label>
+              4th Year students
+              <input
+                type="number"
+                name="fourth_year_limit"
+                min="0"
+                value="0"
+                required
+              >
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <!-- Positions -->
+
+        <div id="positions"></div>
+
+
+        <button
+          class="btn secondary"
+          type="button"
+          id="add-position"
+        >
+          Add position
+        </button>
+
+
+        <button
+          class="btn"
+          type="submit"
+        >
+          Create election
+        </button>
+
+
+      </form>
+
+
+      <div id="created" class="hidden"></div>
+
+    </section>
+
+  </main>
+
+
+  <script src="/js/main.js"></script>
+  <script src="/js/professor.js"></script>
+
+</body>
+</html>

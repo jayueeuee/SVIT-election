@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Live Election Results</title>
+
+  <link
+    rel="stylesheet"
+    href="/css/style.css"
+  >
+
+</head>
+
+
+<body>
+
+  <nav class="nav">
+
+    <a
+      class="brand"
+      href="/"
+    >
+
+      <span class="crest">
+        CE
+      </span>
+
+      College Election
+
+    </a>
+
+  </nav>
+
+
+  <main class="page">
+
+    <div
+      id="alert"
+      class="alert error hidden"
+    ></div>
+
+
+    <section
+      id="loading"
+      class="card"
+    >
+
+      <h2>
+        Loading live results...
+      </h2>
+
+      <p class="muted">
+        Please wait.
+      </p>
+
+    </section>
+
+
+    <section
+      id="results"
+      class="hidden"
+    >
+
+      <div class="row-between">
+
+        <div>
+
+          <p class="kicker">
+            LIVE ELECTION
+          </p>
+
+          <h1 id="election-name">
+            Election
+          </h1>
+
+          <p
+            class="muted"
+            id="election-description"
+          ></p>
+
+        </div>
+
+
+        <div>
+
+          <span
+            id="status"
+            class="badge Active"
+          >
+            LIVE
+          </span>
+
+        </div>
+
+      </div>
+<div class="stats">
+  <div class="stat-card">
+    <span>Start Date & Time</span>
+    <strong id="start-time">-</strong>
+  </div>
+
+  <div class="stat-card">
+    <span>End Date & Time</span>
+    <strong id="end-time">-</strong>
+  </div>
+
+  <div class="stat-card">
+    <span>Total Votes</span>
+    <strong id="total-votes">0</strong>
+  </div>
+
+  <div class="stat-card">
+    <span>Last Updated</span>
+    <strong id="last-updated">Just now</strong>
+  </div>
+</div>
+
+      <div id="positions"></div>
+
+
+    </section>
+
+  </main>
+
+
+  <script src="/js/main.js"></script>
+
+  <script src="/js/live-results.js"></script>
+
+</body>
+
+</html>
